@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
-import useLocationPath from "../../hooks/useLocationPath";
+import {Link, useLocation} from "react-router-dom";
 import './HeaderButton.css';
 
 export default function HeaderButton(props) {
@@ -16,15 +15,15 @@ export default function HeaderButton(props) {
 
 function useIsHeaderButtonActive(buttonPath) {
     const [isActive, setIsActive] = useState(false);
-    const locationPath = useLocationPath();
+    const location = useLocation();
 
     useEffect(() => {
         let btnPath = `/${buttonPath.toLowerCase()}`;
-        setIsActive(btnPath === locationPath);
+        setIsActive(btnPath === location.pathname.toLowerCase());
         return(() => {
             setIsActive(null);
         });
-    });
+    }, [location]);
 
     return isActive;
 }

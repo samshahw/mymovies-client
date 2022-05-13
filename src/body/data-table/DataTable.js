@@ -6,7 +6,7 @@ export default function DataTable(props) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/${props.api}`)
+        fetch(`http://localhost:8080${props.api}`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -18,7 +18,7 @@ export default function DataTable(props) {
                     setError(error);
                 }
             );
-    }, []);
+    }, [props.api]);
 
     if (error) {
         return <div>Error: {error.message}</div>
@@ -29,7 +29,7 @@ export default function DataTable(props) {
             <ul>
                 {items.map(item => (
                     <li key={item.id}>
-                        {item.title}
+                        {item.id}
                     </li>
                 ))}
             </ul>
