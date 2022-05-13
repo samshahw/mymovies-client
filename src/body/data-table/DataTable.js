@@ -22,7 +22,7 @@ export default function DataTable(props) {
                     setError(error);
                 }
             );
-        setIsMovie(props.api === '/movies');
+        setIsMovie(props.api.includes('movie'));
         return () => setIsLoaded(false);
     }, [props.api]);
 
