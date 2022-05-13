@@ -13,7 +13,9 @@ export default function Body() {
 
     return (
         <div id="body">
-            <DataTable api={location.pathname} />
+            <div className="table-wrap">
+                <DataTable api={location.pathname} />
+            </div>
         </div>
     );
 }
