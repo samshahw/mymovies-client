@@ -8,6 +8,10 @@
     background-color: #280073;
 }
 
+#header > * {
+    user-select: none !important;
+}
+
 .header-title {
     margin: 0;
     padding: 0 15px 0 25px;
@@ -31,23 +35,4 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-.header-menus > li {
-    display: inline;
-    padding: 0 30px 0 30px;
-    line-height: 60px;
-    font-family: 'Open Sans Light', sans-serif;
-    font-size: 26px;
-}
-
-.header-menus > li:hover {
-    transition: background-color 1s;
-    background-color: #694d9d;
-    cursor: pointer;
-}
-
-.header-menus > li > a {
-    text-decoration: none;
-    color: #fff;
 }

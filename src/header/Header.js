@@ -1,6 +1,6 @@
 import React from "react";
 import './Header.css';
-import {Link} from "react-router-dom";
+import HeaderButton from "./header-button/HeaderButton";
 
 export default function Header() {
     return(
@@ -14,18 +14,10 @@ export default function Header() {
                 </div>
             </h1>
             <ul className="header-menus">
-                <li>
-                    <Link to="/movies">Movies</Link>
-                </li>
-                <li>
-                    <Link to="/directors">Directors</Link>
-                </li>
-                <li>
-                    <Link to="/admin">Admin</Link>
-                </li>
-                <li>
-                    <Link to="/about">About</Link>
-                </li>
+                <HeaderButton path="Movies" />
+                <HeaderButton path="Directors" />
+                <HeaderButton path="Admin" />
+                <HeaderButton path="About" />
             </ul>
         </div>
     );
