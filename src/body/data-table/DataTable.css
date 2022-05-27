@@ -1,6 +1,32 @@
+#dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    user-select: none !important;
+}
+
+#dataTable > tbody > tr:last-child {
+    border-bottom: none;
+}
+
 #dataTable > thead tr th {
     position: sticky;
     top: 0;
+}
+
+#dataTable > thead > tr,
+#dataTable > tbody > tr {
+    border: 1px solid #e7e7e7;
+}
+
+#dataTable > tbody > tr:hover {
+    background-color: #280073;
+    color: white;
+}
+
+#dataTable > thead > tr > th,
+#dataTable > tbody > tr > td {
+    text-align: left;
+    padding: 10px 15px 10px 15px;
 }
 
 #dataTable > thead > tr > th {
@@ -12,17 +38,18 @@
 #dataTable > tbody > tr > td {
     font-family: 'Open Sans SemiBold', sans-serif;
     font-size: 13px;
+}
+
+.td-clickable:hover {
     cursor: pointer;
+    transition: background-color 1s !important;
+    background-color: #694d9d !important;
 }
 
-#dataTable > tbody > tr:hover {
-    background-color: #694d9d;
-    color: white;
+.td-trash {
+    text-align: center !important;
 }
 
-#dataTable > thead > tr > th,
-#dataTable > tbody > tr > td {
-    text-align: left;
-    padding: 10px 15px 10px 15px;
-    border: 1px solid #e7e7e7;
+.td-trash:hover {
+    background-color: #e81123 !important;
 }

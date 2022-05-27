@@ -2,15 +2,22 @@
     font-family: 'Open Sans', sans-serif;
     src: local('OpenSans-Bold'), url('./resources/fonts/OpenSans/OpenSans-Bold.ttf');
 }
+
 @font-face {
     font-family: 'Open Sans', sans-serif;
     src: local('OpenSans-Light'), url('./resources/fonts/OpenSans/OpenSans-Light.ttf');
 }
+
 @font-face {
     font-family: 'Open Sans', sans-serif;
     src: local('OpenSans-Regular'), url('./resources/fonts/OpenSans/OpenSans-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Open Sans', sans-serif;
     src: local('OpenSans-SemiBold'), url('./resources/fonts/OpenSans/OpenSans-SemiBold.ttf');
+}
+
+body {
+    margin: 0;
 }
