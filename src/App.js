@@ -13,9 +13,9 @@ function App() {
           <Header />
           <Routes>
             <Route exact path="/" element={<Navigate replace to="/movies" />} />
-            <Route path="/movies" element={<Body />} />
-            <Route path="/directors" element={<Body />} />
-            <Route path="/about" element={<About />} />
+            <Route path="movies" element={<Body />} />
+            <Route path="directors" element={<Body />} />
+            <Route path="about" element={<About />} />
           </Routes>
           <Footer />
         </div>
