@@ -4,7 +4,7 @@ import DirectorRecord from "./data-record/DirectorRecord";
 import './DataTable.css';
 import axios from "axios";
 
-export default function DataTable({api}) {
+const DataTable = ({api}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
@@ -63,3 +63,5 @@ export default function DataTable({api}) {
     );
   }
 }
+
+export default DataTable;

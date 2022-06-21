@@ -1,11 +1,13 @@
 import React from "react";
 
-export default function DirectorRecord(props) {
+const DirectorRecord = ({item}) => {
   return (
       <tr>
-        <td>{props.item.id}</td>
-        <td>{props.item.name}</td>
-        <td className="td-clickable">{props.item.country.name}</td>
+        <td>{item['id']}</td>
+        <td>{item['name']}</td>
+        <td className="td-clickable">{item['country']['name']}</td>
       </tr>
   );
 }
+
+export default DirectorRecord;

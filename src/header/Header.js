@@ -2,7 +2,7 @@ import React from "react";
 import './Header.css';
 import HeaderButton from "./header-button/HeaderButton";
 
-export default function Header() {
+const Header = () => {
   return (
       <div id="header">
         <h1 className="header-title">
@@ -21,3 +21,5 @@ export default function Header() {
       </div>
   );
 }
+
+export default Header;

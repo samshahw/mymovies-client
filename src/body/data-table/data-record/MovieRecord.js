@@ -3,7 +3,7 @@ import moment from "moment";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 
-export default function MovieRecord(props) {
+const MovieRecord = ({item}) => {
 
   function formatTitle(title) {
     if (title.includes(', The')) {
@@ -21,13 +21,15 @@ export default function MovieRecord(props) {
 
   return (
       <tr>
-        <td>{props.item.id}</td>
-        <td className="td-clickable">{formatTitle(props.item.title)}</td>
-        <td className="td-clickable">{props.item.genre.name}</td>
-        <td className="td-clickable">{props.item.director.name}</td>
-        <td className="td-clickable">{props.item.country.name}</td>
-        <td>{formatDate(props.item.releaseDate)}</td>
+        <td>{item['id']}</td>
+        <td className="td-clickable">{formatTitle(item['title'])}</td>
+        <td className="td-clickable">{item['genre']['name']}</td>
+        <td className="td-clickable">{item['director']['name']}</td>
+        <td className="td-clickable">{item['country']['name']}</td>
+        <td>{formatDate(item['releaseDate'])}</td>
         <td className="td-clickable td-trash"><FontAwesomeIcon icon={solid('trash')} /></td>
       </tr>
   );
 }
+
+export default MovieRecord;

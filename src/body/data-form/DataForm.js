@@ -1,7 +1,7 @@
 import React from "react";
 import './DataForm.css';
 
-export default function DataForm() {
+const DataForm = () => {
 
   return (
       <form id="dataForm">
@@ -9,3 +9,5 @@ export default function DataForm() {
       </form>
   );
 }
+
+export default DataForm;

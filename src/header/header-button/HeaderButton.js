@@ -2,9 +2,8 @@ import React, {useEffect, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 import './HeaderButton.css';
 
-export default function HeaderButton(props) {
-  const [path, setPath] = useState(props.path);
-  const isActive = useIsHeaderButtonActive(props.path);
+const HeaderButton = ({path}) => {
+  const isActive = useIsHeaderButtonActive(path);
 
   return (
       <li className={`header-button ${isActive ? 'header-button-active' : ''}`}>
@@ -27,3 +26,5 @@ function useIsHeaderButtonActive(buttonPath) {
 
   return isActive;
 }
+
+export default HeaderButton;

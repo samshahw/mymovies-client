@@ -5,7 +5,7 @@ import Body from "./body/Body";
 import About from "./about/About";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 
-function App() {
+const App = () => {
 
   return (
       <BrowserRouter>

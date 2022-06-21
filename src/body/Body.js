@@ -3,7 +3,7 @@ import './Body.css';
 import DataTable from "./data-table/DataTable";
 import {useLocation} from "react-router-dom";
 
-export default function Body() {
+const Body = () => {
   const location = useLocation();
   const [path, setPath] = useState('');
 
@@ -20,3 +20,5 @@ export default function Body() {
       </div>
   );
 }
+
+export default Body;
