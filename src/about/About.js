@@ -4,7 +4,7 @@ import './About.css';
 const About = () => {
   return (
       <div className="about">
-        <h1>About page</h1>
+        <p className="about-text">MyMovies is an indie open-source project.</p>
       </div>
   );
 }

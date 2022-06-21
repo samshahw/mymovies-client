@@ -3,6 +3,7 @@ import MovieRecord from "./data-record/MovieRecord";
 import DirectorRecord from "./data-record/DirectorRecord";
 import './DataTable.css';
 import axios from "axios";
+import LoadingSpinner from "../../loading-spinner/LoadingSpinner";
 
 const DataTable = ({api}) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -46,7 +47,7 @@ const DataTable = ({api}) => {
   if (error) {
     return <div>Error: {error.message}</div>
   } else if (!isLoaded) {
-    return <div>Loading...</div>
+    return <LoadingSpinner />
   } else {
     return (
         <table id="dataTable" cellSpacing="0">
